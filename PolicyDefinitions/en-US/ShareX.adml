@@ -1,0 +1,46 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+    <displayName></displayName>
+    <description></description>
+    <resources>
+        <stringTable>
+            <string id="ShareX">ShareX</string>
+            <string id="ShareXAUC">Auto-Update Check</string>
+            <string id="ShareXAUC_Help">Enabled allows auto-update checks.
+
+Disabled disables auto-update checks
+
+Note: This setting is a preference and not a policy meaning setting it back to "Not Configured" will NOT delete the existing registry key if one is set.
+
+Reference: https://getsharex.com/docs/command-line-arguments</string>
+            <string id="ShareXUC">Upload Capability</string>
+            <string id="ShareXUC_Help">Enabled allows uploads to third-party websites directly from ShareX.
+
+Disabled disables all upload functionality application-wide.
+
+Note: This setting is a preference and not a policy meaning setting it back to "Not Configured" will NOT delete the existing registry key if one is set.
+
+Reference: https://getsharex.com/docs/command-line-arguments</string>
+            <string id="ShareXLOG">Allow Saving Logs to Disk</string>
+            <string id="ShareXLOG_Help">Enabled enables the ability to automatically write debug log files to disk.
+
+Disabled disables the ability to automatically write debug log files to disk.
+
+Note: This setting is a preference and not a policy meaning setting it back to "Not Configured" will NOT delete the existing registry key if one is set.
+
+Reference: https://getsharex.com/docs/command-line-arguments</string>
+            <string id="ShareXPP">Personal Path</string>
+            <string id="ShareXPP_Help">Overrides personal path of ShareX, which is by default the %UserProfile%\Documents\ShareX folder. Use of environment variables is supported in the path.
+
+Note: This setting is a preference and not a policy meaning setting it back to "Not Configured" will NOT delete the existing registry key if one is set.
+
+Reference: https://getsharex.com/docs/command-line-arguments</string>
+        </stringTable>
+        <presentationTable>
+            <presentation id="PersonalPathTextBox">
+                <textBox refId="PersonalPathTextBox">
+                    <label>ShareX Personal User Folder Path:</label>
+                </textBox>
+            </presentation>
+        </presentationTable>
+    </resources>
+</policyDefinitionResources>

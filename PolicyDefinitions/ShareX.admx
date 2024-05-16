@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0"
+    xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+    <policyNamespaces>
+        <target prefix="sharexadmx" namespace="ShareXADMX" />
+        <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+    </policyNamespaces>
+    <resources minRequiredRevision="1.0" />
+    <categories>
+        <category name="SHAREX" displayName="$(string.ShareX)" />
+    </categories>
+    <policies>
+
+        <!-- Machine Prefs -->
+
+        <policy name="UpdateCheck" class="Machine" displayName="$(string.ShareXAUC)" explainText="$(string.ShareXAUC_Help)" key="Software\ShareX" valueName="DisableUpdateCheck">
+            <parentCategory ref="SHAREX" />
+            <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+            <enabledValue>
+                <decimal value="0" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="1" />
+            </disabledValue>
+        </policy>
+
+        <policy name="Upload" class="Machine" displayName="$(string.ShareXUC)" explainText="$(string.ShareXUC_Help)" key="Software\ShareX" valueName="DisableUpload">
+            <parentCategory ref="SHAREX" />
+            <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+            <enabledValue>
+                <decimal value="0" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="1" />
+            </disabledValue>
+        </policy>
+
+        <policy name="Logging" class="Machine" displayName="$(string.ShareXLOG)" explainText="$(string.ShareXLOG_Help)" key="Software\ShareX" valueName="DisableLogging">
+            <parentCategory ref="SHAREX" />
+            <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+            <enabledValue>
+                <decimal value="0" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="1" />
+            </disabledValue>
+        </policy>
+
+        <policy name="PersonalPath" class="Machine" displayName="$(string.ShareXPP)" explainText="$(string.ShareXPP_Help)" presentation="$(presentation.PersonalPathTextBox)" key="Software\ShareX">
+            <parentCategory ref="SHAREX" />
+            <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+            <elements>
+                <text id="PersonalPathTextBox" valueName="PersonalPath" required="true" />
+            </elements>
+        </policy>
+
+        <!-- User Prefs -->
+
+        <policy name="UpdateCheckUser" class="User" displayName="$(string.ShareXAUC)" explainText="$(string.ShareXAUC_Help)" key="Software\ShareX" valueName="DisableUpdateCheck">
+            <parentCategory ref="SHAREX" />
+            <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+            <enabledValue>
+                <decimal value="0" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="1" />
+            </disabledValue>
+        </policy>
+
+        <policy name="UploadUser" class="User" displayName="$(string.ShareXUC)" explainText="$(string.ShareXUC_Help)" key="Software\ShareX" valueName="DisableUpload">
+            <parentCategory ref="SHAREX" />
+            <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+            <enabledValue>
+                <decimal value="0" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="1" />
+            </disabledValue>
+        </policy>
+
+        <policy name="LoggingUser" class="User" displayName="$(string.ShareXLOG)" explainText="$(string.ShareXLOG_Help)" key="Software\ShareX" valueName="DisableLogging">
+            <parentCategory ref="SHAREX" />
+            <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+            <enabledValue>
+                <decimal value="0" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="1" />
+            </disabledValue>
+        </policy>
+
+        <policy name="PersonalPathUser" class="User" displayName="$(string.ShareXPP)" explainText="$(string.ShareXPP_Help)" presentation="$(presentation.PersonalPathTextBox)" key="Software\ShareX">
+            <parentCategory ref="SHAREX" />
+            <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+            <elements>
+                <text id="PersonalPathTextBox" valueName="PersonalPath" required="true" />
+            </elements>
+        </policy>
+
+    </policies>
+</policyDefinitions>
