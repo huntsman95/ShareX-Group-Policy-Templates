@@ -1,4 +1,4 @@
-# ShareX Group Policy Template
+# ShareX Group Policy Templates
 
 ## Summary
 Group Policy files for ShareX (https://getsharex.com/) -or- (https://github.com/ShareX/ShareX)
